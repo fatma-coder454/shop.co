@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+     <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/css?family=Satoshi" rel="stylesheet">
+  <!--  AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papovYVbUq7J0YzkYQyOGhU1J/YHHoBzWbYy5W7m1Yxr1cL4yVmZCzz28HwRSmGvURe5xEQ7v8qIed0kTo4ZAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+     <div class="top-bar">
+    <div class="containers">
+      <p>
+        Sign up and get 20% off to your first order. 
+        <a href="#">Sign Up Now</a>
+      </p>
+      <span class="close-top-bar">&times;</span> <!-- X Icon -->
+    </div>
+</div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+     <div class="container">
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="logo">SHOP.CO</div>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#">On Sale</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Brands</a></li>
+      </ul>
+    </nav>
+      <div class="search-cart">
+        <input type="text" placeholder="Search for products...">
+       <a href="card.html" target="_self"> <i class="fa-solid fa-cart-shopping"></i></a>
+        <i class="fa-regular fa-user"></i>
+      </div>
+    </div>
+  </header>
+
+   <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-section">
+                    <h1 class="cart-title">YOUR CART</h1>
+                    
+                    <div class="cart-items">
+                        <!-- Item 1 -->
+                        <div class="cart-item" data-id="1">
+                            <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Gradient Graphic T-shirt" class="item-image">
+                            <div class="item-details">
+                                <h3 class="item-name">Gradient Graphic T-shirt</h3>
+                                <p class="item-info">Size: Large<br>Color: White</p>
+                                <p class="item-price">$145</p>
+                            </div>
+                            <div class="item-controls">
+                               <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="cart-item" data-id="2">
+                            <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Checkered Shirt" class="item-image">
+                            <div class="item-details">
+                                <h3 class="item-name">Checkered Shirt</h3>
+                                <p class="item-info">Size: Medium<br>Color: Red</p>
+                                <p class="item-price">$180</p>
+                            </div>
+                            <div class="item-controls">
+                               <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="cart-item" data-id="3">
+                            <img src="https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Skinny Fit Jeans" class="item-image">
+                            <div class="item-details">
+                                <h3 class="item-name">Skinny Fit Jeans</h3>
+                                <p class="item-info">Size: Large<br>Color: Blue</p>
+                                <p class="item-price">$240</p>
+                            </div>
+                            <div class="item-controls">
+                                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                                <div class="quantity-controls">
+                                    <button class="qty-btn minus">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="qty-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$565</span>
+                    </div>
+                    
+                    <div class="summary-row discount">
+                        <span>Discount (-20%)</span>
+                        <span class="discount-amount">-$113</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Delivery Fee</span>
+                        <span>$15</span>
+                    </div>
+                    
+                    <hr class="divider">
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="total-amount">$467</span>
+                    </div>
+                    
+                    <div class="promo-code">
+                        <input type="text" placeholder="Add promo code" class="promo-input">
+                        <button class="apply-btn">Apply</button>
+                    </div>
+                    
+                    <button class="checkout-btn">Go to Checkout →</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+ <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <div class="containers">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="email-input-group">
+                          <div class="email-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address" class="email-input">
+                          </div>
+                          <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Company Info -->
+                    <div class="footer-column company-info">
+                        <div class="logo">
+                            <h3>SHOP.CO</h3>
+                        </div>
+                        <p class="company-description">
+                            We have clothes that suits your style and which you're proud to wear. From women to men.
+                        </p>
+                      <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="GitHub">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Help Links -->
+                    <div class="footer-column">
+                        <h4>HELP</h4>
+                        <ul>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Delivery Details</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FAQ Links -->
+                    <div class="footer-column">
+                        <h4>FAQ</h4>
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Manage Deliveries</a></li>
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Payments</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Links -->
+                    <div class="footer-column">
+                        <h4>RESOURCES</h4>
+                        <ul>
+                            <li><a href="#">Free eBooks</a></li>
+                            <li><a href="#">Development Tutorial</a></li>
+                            <li><a href="#">How to - Blog</a></li>
+                            <li><a href="#">YouTube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+
+              <div class="copyright">
+                <p>Shop.co © 2000-2023, All Rights Reserved</p>
+              </div>
+
+              <div class="payment-methods">
+                <img src="img/Frame 53.png" alt="Payment Methods" class="payment-image">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

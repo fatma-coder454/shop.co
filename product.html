@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+     <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/css?family=Satoshi" rel="stylesheet">
+  <!--  AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papovYVbUq7J0YzkYQyOGhU1J/YHHoBzWbYy5W7m1Yxr1cL4yVmZCzz28HwRSmGvURe5xEQ7v8qIed0kTo4ZAA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+      <div class="top-bar">
+    <div class="containers">
+      <p>
+        Sign up and get 20% off to your first order. 
+        <a href="#">Sign Up Now</a>
+      </p>
+      <span class="close-top-bar">&times;</span> <!-- X Icon -->
+    </div>
+</div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+     <div class="container">
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="logo">SHOP.CO</div>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a></li>
+        <li><a href="#">On Sale</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Brands</a></li>
+      </ul>
+    </nav>
+      <div class="search-cart">
+        <input type="text" placeholder="Search for products...">
+        <a href="card.html" target="_self"> <i class="fa-solid fa-cart-shopping"></i></a>
+        <i class="fa-regular fa-user"></i>
+      </div>
+    </div>
+  </header>
+  <!--  product -->
+  <section id="product-details" class="product-details">
+  <div class="product-gallery">
+    <div class="thumbnails">
+      <!-- الصور المصغرة ممكن تفضل ثابتة أو تحطي صور تانية لو تحبي -->
+      <img src="img/image 2.png" alt="thumb1" data-src="img/image 2.png" data-color="black"/>
+      <img src="img/image 5.png" alt="thumb2" data-src="img/image 5.png" data-color="green"/>
+      <img src="img/52ce3b469d8d7ff6e33f95a574450e07218fc909.png" alt="thumb3" data-src="img/52ce3b469d8d7ff6e33f95a574450e07218fc909.png" data-color="navy" />
+    </div>
+    <div class="main-image">
+      <img id="mainImage" class="main-image" src="img/image 2.png" alt="Product Image" data-color="black"/>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h1 id="productTitle">Product Title</h1>
+
+    <div class="rating">
+      ★★★★☆ <span>(451 Reviews)</span>
+    </div>
+
+    <div class="price">
+      <span id="productPrice" class="current">$0</span>
+      <span class="old" id="oldPrice">$0</span>
+      <span class="discount" id="discount">-0%</span>
+    </div>
+
+    <p class="description" id="productDescription">
+      Product description here...
+    </p>
+
+    <div class="colors">
+      <p>Select Colors:</p>
+      <span class="color-option" style="background-color: #2c2c2c;" data-color="black"></span>
+      <span class="color-option" style="background-color: #4b5e40;" data-color="green"></span>
+      <span class="color-option" style="background-color: #2b2540;" data-color="navy"></span>
+    </div>
+
+    <div class="sizes">
+      <p>Choose Size:</p>
+      <button class="size">Small</button>
+      <button class="size">Medium</button>
+      <button class="size active">Large</button>
+      <button class="size">X-Large</button>
+    </div>
+
+    <div class="quantity-cart">
+      <div class="quantity-control">
+        <button class="decrease">-</button>
+        <span class="quantity">1</span>
+        <button class="increase">+</button>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+  <!-- rating -->
+  <section class="reviews-section containers">
+    <div class="tab-headers">
+        <div class="tab-item active" data-tab="details">Product Details</div>
+        <div class="tab-item" data-tab="reviews">Rating & Reviews</div>
+        <div class="tab-item" data-tab="faqs">FAQs</div>
+    </div>
+
+  <div class="reviews-header containers">
+    <h2>All Reviews <span>(451)</span></h2>
+    <div class="review-actions">
+      <select class="sort-select">
+        <option>Latest</option>
+        <option>Oldest</option>
+      </select>
+      
+      <!-- <button class="write-review">Write a Review</button> -->
+      <button id="rateBtn" class="write-review">Write a Review</button>
+
+<div class="modal" id="reviewModal">
+  <div class="modal-content">
+    <span class="closeBtn">&times;</span>
+    <h2>Rate this product</h2>
+    <input type="text" id="username" placeholder="Your Name" />
+
+    <div class="stars" id="starContainer">
+      <span data-star="1">&#9733;</span>
+      <span data-star="2">&#9733;</span>
+      <span data-star="3">&#9733;</span>
+      <span data-star="4">&#9733;</span>
+      <span data-star="5">&#9733;</span>
+    </div>
+
+    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+    <button id="submitReview">Submit</button>
+  </div>
+</div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <div class="reviews-list containers">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <h4>Samantha D. <span class="verified">✔️</span></h4>
+      <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable..."</p>
+      <p class="review-date">Posted on August 14, 2023</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <h4>Alex M.</h4>
+      <p>"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch..."</p>
+      <p class="review-date">Posted on August 15, 2023</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <h4>Samantha D. <span class="verified">✔️</span></h4>
+      <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable..."</p>
+      <p class="review-date">Posted on August 14, 2023</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <h4>Alex M.</h4>
+      <p>"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch..."</p>
+      <p class="review-date">Posted on August 15, 2023</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <h4>Samantha D. <span class="verified">✔️</span></h4>
+      <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable..."</p>
+      <p class="review-date">Posted on August 14, 2023</p>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <h4>Alex M.</h4>
+      <p>"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch..."</p>
+      <p class="review-date">Posted on August 15, 2023</p>
+    <!-- كرري البطاقات حسب عدد التقييمات -->
+  </div>
+
+  <div class="load-more">
+    <button>Load More Reviews</button>
+  </div>
+</section>
+
+
+<!-- product -->
+        <section class="you-might-like containers">
+            <h2 class="section-title">YOU MIGHT ALSO LIKE</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/Frame 32 (2).png" alt="Polo with Contrast Trims">
+                        <div class="discount-badge">-20%</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Polo with Contrast Trims</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">4.5/5</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$212</span>
+                            <span class="old-price">$242</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/Frame 33 (2).png" alt="Gradient Graphic T-shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Gradient Graphic T-shirt</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">4.5/5</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$145</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/Frame 34 (2).png" alt="Polo with Tipping Details">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Polo with Tipping Details</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">4.5/5</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$180</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/Frame 38 (2).png" alt="Black Striped T-shirt">
+                        <div class="discount-badge">-30%</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Striped T-shirt</h3>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">4.0/5</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">$120</span>
+                            <span class="old-price">$160</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <div class="containers">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                    </div>
+                    <div class="newsletter-form">
+                        <div class="email-input-group">
+                          <div class="email-wrapper">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address" class="email-input">
+                          </div>
+                          <button type="submit" class="subscribe-btn">Subscribe to Newsletter</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Company Info -->
+                    <div class="footer-column company-info">
+                        <div class="logo">
+                            <h3>SHOP.CO</h3>
+                        </div>
+                        <p class="company-description">
+                            We have clothes that suits your style and which you're proud to wear. From women to men.
+                        </p>
+                      <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                          <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                          <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="GitHub">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </div>
+
+
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-column">
+                        <h4>COMPANY</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Help Links -->
+                    <div class="footer-column">
+                        <h4>HELP</h4>
+                        <ul>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Delivery Details</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- FAQ Links -->
+                    <div class="footer-column">
+                        <h4>FAQ</h4>
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Manage Deliveries</a></li>
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Payments</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Links -->
+                    <div class="footer-column">
+                        <h4>RESOURCES</h4>
+                        <ul>
+                            <li><a href="#">Free eBooks</a></li>
+                            <li><a href="#">Development Tutorial</a></li>
+                            <li><a href="#">How to - Blog</a></li>
+                            <li><a href="#">YouTube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+
+              <div class="copyright">
+                <p>Shop.co © 2000-2023, All Rights Reserved</p>
+              </div>
+
+              <div class="payment-methods">
+                <img src="img/Frame 53.png" alt="Payment Methods" class="payment-image">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+     <script src="main.js"></script>
+     <script src="index.js"></script>
+     <script src="product.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200, 
+      once: true,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  // جلب المنتج من localStorage
+  const product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+  if (product) {
+    // تحديث الصورة الرئيسية
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = product.image;
+    mainImage.alt = product.title;
+
+    // تحديث العنوان
+    document.getElementById("productTitle").textContent = product.title;
+
+    // تحديث السعر الحالي
+    document.getElementById("productPrice").textContent = `$${product.price}`;
+
+    // السعر القديم والخصم
+    const oldPriceElement = document.getElementById("oldPrice");
+    const discountElement = document.getElementById("discount");
+
+    if (product.oldPrice) {
+      oldPriceElement.textContent = `$${product.oldPrice}`;
+      const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
+      discountElement.textContent = `-${discount}%`;
+    } else {
+      oldPriceElement.style.display = "none";
+      discountElement.style.display = "none";
+    }
+
+    // الوصف - لو عندك وصف في الداتا، استخدميه، ولو مش موجود اكتبي وصف افتراضي
+    document.getElementById("productDescription").textContent = "This is a top-selling product loved by many customers!";
+  }
+</script>
+
+</script>
+
+
+
+
+
+
+</body>
+<script>
+// بيانات المنتجات (مثال)
+const youMightLike = [
+  {
+    id: 1,
+    title: "Stylish Summer T-Shirt",
+    image: "images/products/tshirt.jpg",
+    price: 19.99,
+    oldPrice: 29.99,
+    rating: 4.5,
+  },
+  {
+    id: 2,
+    title: "Classic Denim Jacket",
+    image: "images/products/jacket.jpg",
+    price: 49.99,
+    oldPrice: 69.99,
+    rating: 4.2,
+  },
+  {
+    id: 3,
+    title: "Comfortable Sneakers",
+    image: "images/products/sneakers.jpg",
+    price: 59.99,
+    oldPrice: null,
+    rating: 4.8,
+  },
+  {
+    id: 4,
+    title: "Elegant Leather Bag",
+    image: "images/products/bag.jpg",
+    price: 89.99,
+    oldPrice: 119.99,
+    rating: 4.6,
+  }
+];
+
+// استدعاء عنصر الحاوية
+const youMightLikeContainer = document.getElementById("new-arrivals");
+
+// إنشاء الكروت وعرضها
+youMightLike.forEach((product) => {
+  const card = document.createElement("div");
+  card.className = "product-card";
+  card.style.cursor = "pointer";
+
+  const stars = "★".repeat(Math.floor(product.rating)) + "☆".repeat(5 - Math.floor(product.rating));
+  const ratingText = `${product.rating.toFixed(1)}/5`;
+
+  const discount = product.oldPrice
+    ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
+    : 0;
+
+  const badgeHTML = discount > 0
+    ? `<div class="discount-badge">-${discount}%</div>`
+    : "";
+
+  const oldPriceHTML = product.oldPrice
+    ? `<span class="old-price">$${product.oldPrice}</span>`
+    : "";
+
+  card.innerHTML = `
+    <div class="product-image">
+      <img src="${product.image}" alt="${product.title}">
+      ${badgeHTML}
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">${product.title}</h3>
+      <div class="rating">
+        <span class="stars">${stars}</span>
+        <span class="rating-count">${ratingText}</span>
+      </div>
+      <div class="price">
+        <span class="current-price">$${product.price}</span>
+        ${oldPriceHTML}
+      </div>
+    </div>
+  `;
+
+  // عند الضغط، خزّن المنتج وافتح صفحة المنتج
+  card.addEventListener("click", () => {
+    localStorage.setItem("selectedProduct", JSON.stringify(product));
+    window.location.href = "product.html"; // عدلي الاسم حسب صفحة التفاصيل عندك
+  });
+
+  youMightLikeContainer.appendChild(card);
+});
+</script>
+</html>
